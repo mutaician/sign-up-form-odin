@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: #5D6063;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F7F8;
+
+
+}
+
+.navMenu{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.navMenu .background{
+    width: 100%;
+    height: 100%;
+}
+
+.navMenu .logo{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    width: 120px;
+    height: 120px;
+    transform: translate(-50%, -50%);
+}
+
+.imagecredit{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 7px;   
+
+}
+
+.main-content{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-info{
+    font-size: 20px;
+    padding: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.input-form {
+    padding-top: 20px;
+    background-color: #F6F7F8;
+}
+
+.input-form fieldset{
+    margin: 0 auto;
+    width: 90%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px -2px gray;
+    background-color: #FFFFFF;
+    align-self: center;
+}
+
+.input-form fieldset .form-info{
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 2.3em;
+    flex: 1 0 100%;
+}
+
+.form-row{
+    margin-left: 3em;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;    
+}
+
+.form-row input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 70%;
+    font-size: 16px;
+}
+
+.form-row label{
+    letter-spacing: 1px;
+}
+
+.form-row input:focus:invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 5px red;
+}
+
+.form-row input:focus{
+    outline: none;
+    border: 1px solid #754ce7;
+    box-shadow: 0 0 5px #754ce7;
+}
+
+.input-form button{
+    width: 16em;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #754ce7;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 40px;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.input-form button:hover{
+    background-color: #5e3abf;
+}
+
+.input-form button:active{
+    background-color: #4a2a8a;
+}
+
+.required{
+    color: red;
+    font-size: 1.2em;
+}
+
+.form-row label{
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.content-info, .main-content{
+    max-width: 100ch;
+}
+
+#passwordMatch{
+    color: red;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+@media only screen and (min-width: 860px){
+    .navMenu{
+        height: 100vh;
+        flex: 0 0 35%;
+    }
+    .navMenu .logo{
+        top: 10%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+    body{
+        flex-direction: row;
+    }
+    .main-content{
+        flex: 1;
+    }
+    .input-form fieldset{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .input-form .form-row{
+        /* flex-basis: 50%; */
+        width: 40%;
+        margin-bottom: 30px;
+        /* margin-right: 20px; */
+    }
+    .form-info{
+        flex-basis: 100%;
+    }
+
+    .form-info input{
+        width: 100%;
+    }
+
+    .form-row input{
+        width: 90%;
+    }
+    
+}

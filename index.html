@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="navMenu">
+        <img src="./images/odin-lined.png" alt="Logo" class="logo">
+        <img src="./images/uriel-soberanes-MxVkWPiJALs-unsplash.jpg" alt="Background" class="background">
+        <p class="imagecredit">Photo by <a
+                href="https://unsplash.com/@soberanes?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Uriel
+                Soberanes</a> on <a
+                href="https://unsplash.com/photos/man-wearing-sony-playstation-vr-MxVkWPiJALs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </p>
+    </div>
+    <div class="main-content">
+        <div class="content-info">
+            <h3>This is not a real online service! You know you need something like this in your life to help you
+                realize your deepest dreams.</h3>
+            <h3>Sign up <em>now</em> and start your journey to greatness.</h3>
+            <h3>You <em>know</em> you want to.</h3>
+        </div>
+        <form action="" method="get" class="input-form">
+            <fieldset>
+                <div class="form-info">Let's do this!</div>
+                <div class="form-row">
+                    <label for="fname">FIRST NAME <span class="required">*</span></label>
+                    <input type="text" id="fname" name="fname" required pattern="[A-Za-z]{1,32}"
+                        title="First name must be between 1 and 32 characters and contain only letters.">
+                </div>
+                <div class="form-row">
+                    <label for="lname">LAST NAME</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <div class="form-row">
+                    <label for="email">EMAIL <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address." />
+                </div>
+                <div class="form-row">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-row">
+                    <label for="password">PASSWORD <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-row">
+                    <label for="confirm-password">CONFIRM PASSWORD <span class="required">*</span></label>
+                    <input type="password" id="confirm-password" name="confirm-password" required
+                        oninput="checkPassword()">
+                    <p id="passwordMatch"></p>
+                </div>
+            </fieldset>
+            <div class="form-row login">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password');
+            var confirm = document.getElementById('confirm-password');
+            var message = document.getElementById('passwordMatch');
+            var badborder = " 1px solid red";
+            var badbordershadow = "0 0 5px red";
+            if (password.value == confirm.value) {
+                confirm.style.border = "";
+                confirm.style.boxShadow = "";
+                message.innerHTML = "";
+            } else {
+                confirm.style.border = badborder;
+                confirm.style.boxShadow = badbordershadow;
+                message.innerHTML = "*Passwords Do Not Match!";
+            }
+        }
+    </script>
+</body>
+
+</html>
