@@ -162,6 +162,10 @@ body{
     margin-top: 10px;
 }
 
+.login{
+    margin-left: 5em;
+}
+
 
 @media only screen and (min-width: 860px){
     .navMenu{
@@ -199,6 +203,9 @@ body{
 
     .form-row input{
         width: 90%;
+    }
+    .login{
+        margin-left: 3em;
     }
     
 }
